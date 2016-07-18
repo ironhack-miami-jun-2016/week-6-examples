@@ -23,5 +23,10 @@ See the three models for the specific wiring:
 - [`PokemonType` model](app/models/pokemon_type.rb)
 
 
+Once the wiring is complete,
+see examples of using the association
+[in the `seeds.rb` file](db/seeds.rb#L24-L38).
+
+
 Read more about many to many associations in Rails in the
 [Rails Guide](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association).
