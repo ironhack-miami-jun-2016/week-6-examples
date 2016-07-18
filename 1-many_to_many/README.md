@@ -1,24 +1,27 @@
-# README
+Many To Many Associations
+=========================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Many to many associations need an addional model to work.
+I call it the _middle man_.
+In the `Pokemon` and `Type` example, I called it `PokemonType`.
+Here are the commands that I used to generate the models:
 
-Things you may want to cover:
 
-* Ruby version
+```bash
+$ rails generate model  Pokemon            name:string        hp:integer       cp:integer
+$ rails generate model  Type               name:string  weakness:string   stength:string
 
-* System dependencies
+$ rails generate model  PokemonType  pokemon_id:integer  type_id:integer
+```
 
-* Configuration
+See the final schema in [the `db/schema.rb`](db/schema.rb).
 
-* Database creation
 
-* Database initialization
+See the three models for the specific wiring:
+- [`Pokemon` model](app/models/pokemon.rb)
+- [`Type` model](app/models/type.rb)
+- [`PokemonType` model](app/models/pokemon_type.rb)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Read more about many to many associations in Rails in the
+[Rails Guide](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association).
