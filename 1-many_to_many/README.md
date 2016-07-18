@@ -8,10 +8,10 @@ Here are the commands that I used to generate the models:
 
 
 ```bash
-$ rails generate model  Pokemon            name:string        hp:integer       cp:integer
-$ rails generate model  Type               name:string  weakness:string   stength:string
+$ rails generate model  Pokemon            name:string         hp:integer       cp:integer
+$ rails generate model  Type               name:string   weakness:string   stength:string
 
-$ rails generate model  PokemonType  pokemon_id:integer  type_id:integer
+$ rails generate model  PokemonType  pokemon_id:integer   type_id:integer
 ```
 
 See the final schema in [the `db/schema.rb`](db/schema.rb).
