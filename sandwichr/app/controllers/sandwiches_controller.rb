@@ -14,7 +14,8 @@ class SandwichesController < ApplicationController
     the_sandwich = Sandwich.find_by(id: params[:id])
 
     if the_sandwich
-      render json: the_sandwich
+      # render json: { sandwich: the_sandwich, ingredients: the_sandwich.ingredients }
+      render json: the_sandwich.to_json(include: [:ingredients])
     else
       render status: 404, json: { error: "Sandwich #{params[:id]} not found" }
     end
