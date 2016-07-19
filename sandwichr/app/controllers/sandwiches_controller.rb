@@ -36,7 +36,7 @@ class SandwichesController < ApplicationController
 
     if the_sandwich
       the_sandwich.destroy
-      render json: the_sandwich
+      head :no_content
     else
       render status: 404, json: { error: "Sandwich #{params[:id]} not found" }
     end
