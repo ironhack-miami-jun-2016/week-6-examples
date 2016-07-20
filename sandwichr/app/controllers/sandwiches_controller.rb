@@ -1,7 +1,7 @@
 class SandwichesController < ApplicationController
 
   def index
-    sandwiches_array = Sandwiches.all
+    sandwiches_array = Sandwich.all
     render json: sandwiches_array
   end
 
