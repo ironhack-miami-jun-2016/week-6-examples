@@ -2,6 +2,10 @@
 
 <ul>
   <% @sandwiches_array.each do |the_sandwich| %>
-    <li> <%= the_sandwich.name %> </li>
+    <li>
+      <a href="<%= sandwich_path(the_sandwich) %>">
+        <%= the_sandwich.name %>
+      </a>
+    </li>
   <% end %>
 </ul>

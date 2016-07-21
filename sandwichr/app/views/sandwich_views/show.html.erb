@@ -1,0 +1,16 @@
+<h2> Sandwich details </h2>
+
+<h3> <%= @the_sandwich.name %> </h3>
+
+<p>
+  Bread type:
+  <strong> <%= @the_sandwich.bread_type %> </strong>
+</p>
+
+<h4> Current ingredients </h4>
+
+<ul>
+  <% @the_sandwich.ingredients.each do |the_ingredient| %>
+    <li> <%= the_ingredient.name %> </li>
+  <% end %>
+</ul>

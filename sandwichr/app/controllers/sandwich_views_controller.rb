@@ -5,4 +5,9 @@ class SandwichViewsController < ApplicationController
     render :index
   end
 
+  def show
+    @the_sandwich = Sandwich.find(params[:id])
+    render :show
+  end
+
 end
